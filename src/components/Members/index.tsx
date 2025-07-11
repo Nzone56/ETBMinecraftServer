@@ -27,11 +27,11 @@ export const Members = () => {
       setShowNew(false);
 
       setTimeout(() => {
-        // Cambia al nuevo después de animar el anterior
+        // Change char when animation ends
         setPrevParticipant(currentParticipant);
         setAnimatingOut(false);
         setShowNew(true);
-      }, 900); // duración del spin-up-out
+      }, 2000); // spin-up-out duration
     } else {
       // Primer render
       setPrevParticipant(currentParticipant);
@@ -40,7 +40,6 @@ export const Members = () => {
     //eslint-disable-next-line
   }, [currentParticipant]);
 
-  console.log(animatingOut, showNew, )
   return (
     <section id="members" className="min-h-[100vh] w-full bg-background text-foreground py-32 px-4 flex flex-col items-center">
       <h2 className="text-3xl md:text-4xl font-minecraft text-primary mb-10 text-center">Miembros del servidor</h2>

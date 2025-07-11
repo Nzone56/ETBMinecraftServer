@@ -64,26 +64,30 @@
 
 @keyframes spin-up-out {
   0% {
-    transform: translateY(0);
-    opacity: 1
+    transform: rotate3d(0, 1, 0, 0deg) translateY(0);
+    opacity: 1;
   }
-  50% {
-    transform: translateY(-50px);
-    opacity: 0.5
+  25% {
+    transform: rotate3d(0, 1, 0, 200deg) translateY(-25px);
+    opacity: 1;
   }
   100% {
-    transform: translateY(-100px);
-    opacity: 0
+    transform: rotate3d(0, 1, 0, 1500deg) translateY(-100px);
+    opacity: 0;
   }
 }
 
 @keyframes fall-in {
   0% {
-    transform: translateY(-100px);
+    transform: rotate3d(0, 1, 0, 1500deg) translateY(-100px);
     opacity: 0
   }
+  75% {
+    transform: rotate3d(0, 1, 0, 200deg) translateY(0px);
+    opacity: 1
+  }
   100% {
-    transform: translateY(0px);
+    transform: rotate3d(0, 1, 0, 0deg) translateY(0px);
     opacity: 1
   }
 }
@@ -98,11 +102,11 @@
 }
 
 .animate-spin-up-out {
-  animation: spin-up-out 1s ease-in forwards;
+  animation: spin-up-out 2s ease-in forwards;
 }
 
 .animate-fall-in {
-  animation: fall-in 0.6s ease-out forwards;
+  animation: fall-in 1.5s ease-out forwards;
 }
 
 html {

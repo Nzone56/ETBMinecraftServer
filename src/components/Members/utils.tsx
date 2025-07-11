@@ -111,12 +111,23 @@ export const AllMembers: Member[] = [
       "Este sí es la reencarnación de ilmango",
     ],
   },
+  {
+    name: "Cristianlive",
+    role: "Guest",
+    team: "TBD",
+    highlights: [
+      "Es costeño",
+      "Investigado por estafas con NFT'S",
+      `ElAndrow: "La mamá del niño lo engañó con un negro"`,
+    ],
+  },
 ];
 
 const roleColors: Record<string, string> = {
   admin: "text-red-600 font-semibold",
-  mod: "text-yellow-500 font-semibold",
+  mod: "text-blue-500 font-semibold",
   member: "text-green-500 font-semibold",
+  guest: "text-yellow-500 font-semibold",
 };
 
 const teamColors: Record<string, string> = {

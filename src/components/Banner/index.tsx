@@ -1,11 +1,12 @@
-'use client';
+"use client";
 
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const Banner = () => {
-  const serverOnline = false; 
+  const serverOnline = false;
   const serverIP = "mc.etb.gg";
-  const launchDate = new Date("2025-07-25T18:00:00");
+  const launchDate = new Date("2025-07-25T19:00:00");
 
   const [timeLeft, setTimeLeft] = useState("");
 
@@ -25,11 +26,7 @@ export const Banner = () => {
       const minutes = Math.floor((diff / (1000 * 60)) % 60);
       const seconds = Math.floor((diff / 1000) % 60);
 
-      setTimeLeft(
-        `${days}d ${hours.toString().padStart(2, "0")}h ${minutes
-          .toString()
-          .padStart(2, "0")}m ${seconds.toString().padStart(2, "0")}s`
-      );
+      setTimeLeft(`${days}d ${hours.toString().padStart(2, "0")}h ${minutes.toString().padStart(2, "0")}m ${seconds.toString().padStart(2, "0")}s`);
     }, 1000);
 
     return () => clearInterval(interval);
@@ -42,49 +39,31 @@ export const Banner = () => {
   };
 
   return (
-    <section
-      id="inicio"
-      className="relative h-[100vh] w-[100%] flex items-center justify-center text-center text-foreground overflow-hidden"
-    >
-      {/* Fondo animado */}
-      <div className="absolute inset-0 z-0 bg-[url('/bg-animado.gif')] bg-cover bg-center opacity-20" />
+    <section id="status" className="relative h-[100vh] w-[100%] flex items-center justify-center text-center text-foreground overflow-hidden">
+      {/* Background video */}
+      <video className="absolute top-0 left-0 w-full h-full object-cover" src={"/videos/background.mp4"} autoPlay muted loop playsInline />
 
-      {/* Contenido */}
+      {/* Opacity layer */}
+      <div className="absolute inset-0 bg-black/40 z-10" />
+
+      {/* Content */}
       <div className="relative z-10 max-w-3xl px-6">
-        <h1 className="text-5xl md:text-6xl font-minecraft text-primary mb-6">
-          🧱 Minecraft ETB Server
-        </h1>
-        <p className="text-lg md:text-xl mb-4">
-          Explora, construye y conquista con tus amigos!
-        </p>
+        <h1 className="text-5xl md:text-6xl font-minecraft text-primary mb-6">Minecraft ETB Server 4</h1>
+        <p className="text-lg md:text-xl mb-4">Tiempo de Espera:</p>
 
-        {/* Estado del servidor */}
-        <div
-          className={`inline-block px-4 py-2 rounded text-sm font-bold ${
-            serverOnline
-              ? "bg-green-600/80 text-white"
-              : "bg-red-600/80 text-white"
-          }`}
-        >
+        {/* Counter */}
+        <div className="text-3xl md:text-5xl font-bold text-primary mb-6">{timeLeft}</div>
+
+        {/* Status */}
+        <div className={`inline-block px-4 py-2 mb-4 rounded text-sm font-bold ${serverOnline ? "bg-green-600/80 text-white" : "bg-red-600/80 text-white"}`}>
           {serverOnline ? "🟢 Servidor en línea" : "🔴 Servidor fuera de línea"}
         </div>
 
-                  {/* 🔥 Contador grande */}
-        <div className="text-3xl md:text-5xl font-bold text-primary mb-6">
-          {timeLeft}
-        </div>
-
-        {/* IP + copiar */}
+        {/* IP */}
         <div className="flex items-center justify-center gap-2 mb-4">
-          <code className="bg-background/60 border border-tertiary px-3 py-1 rounded text-sm font-mono">
-            {serverIP}
+          <code className="flex items-center gap-2 bg-background/60 border border-tertiary pl-3 rounded text-sm font-mono">
+            {serverIP} <Image src="/icons/copy.svg" className="bg-black py-1 cursor-pointer" alt="Logo" width={20} height={20} onClick={copyToClipboard} />
           </code>
-          <button
-            onClick={copyToClipboard}
-            className="text-xs px-3 py-1 rounded bg-primary text-black hover:bg-cyan-300 transition-colors"
-          >
-            Copiar IP
-          </button>
         </div>
       </div>
     </section>

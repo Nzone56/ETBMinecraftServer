@@ -50,8 +50,21 @@
   }
 }
 
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
 .animate-run {
   animation: run-loop 0.6s infinite ease-in-out;
+}
+
+.animate-bump {
+  animation: run-loop 1.6s infinite ease-in-out;
 }
 
 html {

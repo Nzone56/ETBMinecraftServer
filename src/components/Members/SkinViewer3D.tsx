@@ -14,10 +14,10 @@ export const SkinViewer3D = ({ username }: Props) => {
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
-
+    
     const viewer = new SkinViewer({
-      width: 350,
-      height: 350,
+      width: 300,
+      height: 300,
       skin: `https://mc-heads.net/skin/${username}`,
     });
 
@@ -26,13 +26,12 @@ export const SkinViewer3D = ({ username }: Props) => {
     viewer.animation = new WalkingAnimation();
     viewer.controls.enableZoom = false;
 
-    // Guardamos en ref para posible uso futuro
     viewerRef.current = viewer;
 
     return () => {
       viewerRef.current?.dispose();
       viewerRef.current = null;
-      container.innerHTML = ""; // limpieza segura
+      container.innerHTML = ""; 
     };
   }, [username]);
 

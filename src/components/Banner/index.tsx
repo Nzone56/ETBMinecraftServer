@@ -8,7 +8,7 @@ export const Banner = () => {
   const serverIP = "mc.etb.gg";
   const launchDate = new Date("2025-07-25T19:00:00");
 
-  const [timeLeft, setTimeLeft] = useState("");
+  const [timeLeft, setTimeLeft] = useState("--d --h --m --s");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -47,7 +47,11 @@ export const Banner = () => {
       <div className="absolute inset-0 bg-black/40 z-10" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-3xl px-6">
+      <div className="relative z-10 max-w-3xl px-6 ">
+        <p className="absolute flex flex-col right-0 rotate-45 animate-bump">
+          PROMOCIONADO POR:
+          <strong> NICO NICO NII</strong>
+        </p>
         <h1 className="text-5xl md:text-6xl font-minecraft text-primary mb-6">Minecraft ETB Server 4</h1>
         <p className="text-lg md:text-xl mb-4">Tiempo de Espera:</p>
 

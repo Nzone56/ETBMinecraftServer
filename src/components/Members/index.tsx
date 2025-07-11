@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { SkinViewer3D } from "./SkinViewer3D";
-import { AllMembers } from "./Variables";
+import { AllMembers, getRoleColor, getTeamColor } from "./utils";
 import { Member } from "@/interfaces";
 
 export const Members = () => {
@@ -79,12 +79,18 @@ export const Members = () => {
           <span className="mt-2 text-2xl font-bold text-center">{prevParticipant.name}</span>
 
           <div className="mt-4 text-lg space-y-1 text-center lg:text-start">
-            <p>
-              <strong>Rol:</strong> {prevParticipant.role}
-            </p>
-            <p>
-              <strong>Equipo:</strong> {prevParticipant.team}
-            </p>
+          <p>
+            <strong>Rol:</strong>{" "}
+            <span className={getRoleColor(prevParticipant.role)}>
+              {prevParticipant.role}
+            </span>
+          </p>
+          <p>
+            <strong>Equipo:</strong>{" "}
+            <span className={getTeamColor(prevParticipant.team)}>
+              {prevParticipant.team}
+            </span>
+          </p>
           </div>
 
           <ul className="mt-3 text-lg text-center lg:text-left list-disc list-inside">

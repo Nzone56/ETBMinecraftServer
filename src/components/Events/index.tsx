@@ -1,15 +1,24 @@
 "use client";
 
+import { Event } from "@/interfaces";
 import React from "react";
 
-const events = [
+const events: Event[] = [
+  {
+    title: "📣 Anuncio oficial",
+    date: "1 de Julio",
+    time: "7:00 PM (COL)",
+    description:
+      "Se anuncio la 4edición (creo) del METBS.",
+    end: true,
+  },
   {
     title: "🎉 Inauguración oficial",
     date: "25 de Julio",
     time: "7:00 PM (COL)",
     description:
       "Prepárate para explorar, construir y sobrevivir junto a todos los participantes en el mundo de Minecraft ETB.",
-    tentative: false,
+    end: false,
   },
   {
     title: "🐉 Evento Dragona",
@@ -17,7 +26,7 @@ const events = [
     time: "TBD",
     description:
       "Matar a la dragona, a Axel y conseguir Elytras",
-    tentative: true,
+    end: false,
   },
 ];
 
@@ -36,7 +45,7 @@ export const Events = () => {
           <div
             key={index}
             className={`w-[300px] h-[260px] flex flex-col border rounded-xl p-6 text-sm md:text-base text-center shadow-lg ${
-              event.tentative
+              event.end
                 ? "bg-muted border-dashed border-border text-muted-foreground"
                 : "bg-secondary border-tertiary"
             }`}

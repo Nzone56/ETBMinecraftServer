@@ -35,5 +35,5 @@ export const SkinViewer3D = ({ username }: Props) => {
     };
   }, [username]);
 
-  return <div ref={containerRef} className="rounded overflow-hidden" />;
+  return <div ref={containerRef} className="rounded overflow-hidden " />;
 };

@@ -1,4 +1,6 @@
-export const AllMembers = [
+import { Member } from "@/interfaces";
+
+export const AllMembers: Member[]= [
   {
     name: "NicoNicoNii",
     role: "Admin",

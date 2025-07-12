@@ -67,10 +67,6 @@
     transform: rotate3d(0, 1, 0, 0deg) translateY(0);
     opacity: 1;
   }
-  25% {
-    transform: rotate3d(0, 1, 0, 200deg) translateY(-25px);
-    opacity: 1;
-  }
   100% {
     transform: rotate3d(0, 1, 0, 1500deg) translateY(-100px);
     opacity: 0;
@@ -80,18 +76,13 @@
 @keyframes fall-in {
   0% {
     transform: rotate3d(0, 1, 0, 1500deg) translateY(-100px);
-    opacity: 0
-  }
-  75% {
-    transform: rotate3d(0, 1, 0, 200deg) translateY(0px);
-    opacity: 1
+    opacity: 0;
   }
   100% {
     transform: rotate3d(0, 1, 0, 0deg) translateY(0px);
-    opacity: 1
+    opacity: 1;
   }
 }
-
 
 .animate-run {
   animation: run-loop 0.6s infinite ease-in-out;
@@ -102,11 +93,11 @@
 }
 
 .animate-spin-up-out {
-  animation: spin-up-out 2s ease-in forwards;
+  animation: spin-up-out 1.25s ease-in forwards;
 }
 
 .animate-fall-in {
-  animation: fall-in 1.5s ease-out forwards;
+  animation: fall-in 1s ease-out forwards;
 }
 
 html {
@@ -117,4 +108,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Minecraft", sans-serif;
+}
+
+.thumbnail-scroll {
+  background-color: rgba(255, 255, 255, 0.05); /* o tu bg-secondary con opacidad */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* o border-tertiary */
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  scrollbar-color: #888 transparent;
 }

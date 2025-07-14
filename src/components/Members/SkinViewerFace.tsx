@@ -3,15 +3,16 @@
 import Image from "next/image";
 
 type Props = {
+  uid: string;
   username: string;
   size: number;
   selected?: boolean;
   handleSelectIcon?: () => void;
 };
 
-export const SkinViewerFace = ({ username, size, selected, handleSelectIcon }: Props) => {
-  const avatarUrl = `https://mc-heads.net/combo/${username}?size=${size}`;
-
+export const SkinViewerFace = ({ uid, username, size, selected, handleSelectIcon }: Props) => {
+  const avatarUrl = `https://mc-heads.net/combo/${uid}?size=${size}`;
+  
   return (
     <div
       title={username}

@@ -79,6 +79,28 @@
   }
 }
 
+@keyframes wipe-out-left {
+  0% {
+    clip-path: inset(0% 0% 0% 0%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0% 100% 0% 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes wipe-in-right {
+  0% {
+    clip-path: inset(0% 100% 0% 0%);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0% 0% 0% 0%);
+    opacity: 1;
+  }
+}
+
 .animate-bump {
   animation: bump 1.5s infinite ease-in-out;
 }
@@ -94,6 +116,16 @@
 .animate-banner-wave {
   animation: banner-wave 2s ease-in-out infinite;
   transform-origin: top center;
+}
+
+.animate-wipe-out-left {
+  animation: wipe-out-left 0.6s ease forwards;
+  z-index: 10;
+}
+
+.animate-wipe-in-right {
+  animation: wipe-in-right 0.6s ease forwards;
+  z-index: 20;
 }
 
 html {

@@ -7,7 +7,7 @@ import { TeamInfo } from "./TeamInfo";
 
 export const TeamsView = () => {
 
-  const { currentIndex, setCurrentIndex, handlePrevious, handleNext, prevItem, animatingOut, showNew } = useItemSelector<Team>({itemsArray: AllTeams});
+  const { currentIndex, setCurrentIndex, handlePrevious, handleNext, prevItem, animatingOut, showNew } = useItemSelector<Team>({itemsArray: AllTeams, duration: 600});
 
   return (
     <>
@@ -17,7 +17,6 @@ export const TeamsView = () => {
             <TeamPreview
               key={index}
               team={team}
-              size={64}
               selected={currentIndex === index}
               handleSelectIcon={() => setCurrentIndex(index)}
             />
@@ -34,17 +33,17 @@ export const TeamsView = () => {
 
           {/* Member name */}
           {/* Current Member viewer */}
-          <div className={`min-w-[300px] w-[300px] relative flex flex-col items-center mx-2`}>
-            {/* Animación de salida */}
+          <div className="min-w-[300px] w-[300px] min-h-[365px] relative flex flex-col items-center mx-2 overflow-hidden">
+            {/* Salida (cortando de izquierda a derecha) */}
             {animatingOut && prevItem && (
-              <div className="animate-spin-up-out w-full">
+              <div className="absolute inset-0 animate-wipe-out-left">
                 <TeamInfo team={prevItem} />
               </div>
             )}
 
-            {/* Nueva entrada */}
+            {/* Entrada (apareciendo desde la izquierda) */}
             {showNew && prevItem && (
-              <div className="animate-fall-in w-full">
+              <div className="absolute inset-0 animate-wipe-in-right">
                 <TeamInfo team={prevItem} />
               </div>
             )}

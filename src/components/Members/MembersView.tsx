@@ -8,7 +8,7 @@ import { useItemSelector } from "@/hooks/useItemSelector";
 import { Member } from "@/interfaces";
 
 export const MembersView = () => {
-  const { currentIndex, setCurrentIndex, handlePrevious, handleNext, prevItem, animatingOut, showNew } = useItemSelector<Member>({ itemsArray: AllMembers });
+  const { currentIndex, setCurrentIndex, handlePrevious, handleNext, prevItem, animatingOut, showNew } = useItemSelector<Member>({ itemsArray: AllMembers, duration: 1500 });
 
   return (
     <>

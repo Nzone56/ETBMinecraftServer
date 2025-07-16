@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-export const useItemSelector = <T>({ itemsArray }: { itemsArray: T[] }) => {
+export const useItemSelector = <T>({ itemsArray, duration }: { itemsArray: T[], duration: number }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   // ANIMATION STATES
   const [prevItem, setPrevItem] = useState<T>();
   const [animatingOut, setAnimatingOut] = useState(false);
   const [showNew, setShowNew] = useState(false);
   const currentItem = itemsArray?.[currentIndex];
-  console.log(prevItem, currentItem)
+
   const handlePrevious = () => setCurrentIndex((prev) => (prev === 0 ? itemsArray?.length - 1 : prev - 1));
 
   const handleNext = () => setCurrentIndex((prev) => (prev === itemsArray?.length - 1 ? 0 : prev + 1));
@@ -25,7 +25,7 @@ export const useItemSelector = <T>({ itemsArray }: { itemsArray: T[] }) => {
         setPrevItem(currentItem);
         setAnimatingOut(false);
         setShowNew(true);
-      }, 1500); // spin-up-out duration
+      }, duration); // spin-up-out duration
     } else {
       // Primer render
       setPrevItem(currentItem);

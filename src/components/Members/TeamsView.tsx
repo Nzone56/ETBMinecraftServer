@@ -12,7 +12,7 @@ export const TeamsView = () => {
   return (
     <>
       <div className="px-6 flex items-center justify-center w-full max-w-[1200px] mb-8">
-        <div className="flex items-center justify-start gap-2 overflow-x-auto overflow-y-hidden p-3 thumbnail-scroll">
+        <div className="flex items-center justify-start gap-2 overflow-x-auto overflow-y-hidden p-3 thumbnail-scroll-preview">
           {AllTeams.map((team, index) => (
             <TeamPreview
               key={index}
@@ -34,17 +34,17 @@ export const TeamsView = () => {
 
           {/* Member name */}
           {/* Current Member viewer */}
-          <div className={`w-[300px] h-[300px] relative flex flex-col items-center`}>
+          <div className={`min-w-[300px] w-[300px] relative flex flex-col items-center mx-2`}>
             {/* Animación de salida */}
             {animatingOut && prevItem && (
-              <div className="animate-spin-up-out">
+              <div className="animate-spin-up-out w-full">
                 <TeamInfo team={prevItem} />
               </div>
             )}
 
             {/* Nueva entrada */}
             {showNew && prevItem && (
-              <div className="animate-fall-in">
+              <div className="animate-fall-in w-full">
                 <TeamInfo team={prevItem} />
               </div>
             )}

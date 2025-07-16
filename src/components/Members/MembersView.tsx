@@ -14,7 +14,7 @@ export const MembersView = () => {
     <>
       {/* FACE MEMBER SELECTOR */}
       <div className="px-6 flex items-center justify-center w-full max-w-[1200px] mb-8">
-        <div className="flex items-center justify-start gap-2 overflow-x-auto overflow-y-hidden p-2 thumbnail-scroll">
+        <div className="flex items-center justify-start gap-2 overflow-x-auto overflow-y-hidden p-2 thumbnail-scroll-preview">
           {AllMembers.map((member, index) => (
             <SkinViewerFace
               key={index}

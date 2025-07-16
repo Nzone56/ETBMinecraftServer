@@ -12,7 +12,6 @@ type Props = {
 
 export const SkinViewerFace = ({ uid, username, size, selected, handleSelectIcon }: Props) => {
   const avatarUrl = `https://mc-heads.net/combo/${uid}?size=${size}`;
-  
   return (
     <div
       title={username}

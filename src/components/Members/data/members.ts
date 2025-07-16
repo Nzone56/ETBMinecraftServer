@@ -13,7 +13,7 @@ export const AllMembers: Member[] = [
     ],
   },
   {
-    uid: "ee1a420c-8d3b-4ad4-9f65-6ed8ac2fcaf6",
+    uid: "ee1a420c8d3b4ad49f656ed8ac2fcaf6",
     name: "YURMMOMMY",
     role: "Mod",
     team: "Qin State",
@@ -24,7 +24,7 @@ export const AllMembers: Member[] = [
     ],
   },
   {
-    uid: "46086d6e66304fa6a0207393e4f5c228",
+    uid: "46086d6e-6630-4fa6-a020-7393e4f5c228",
     name: "Gabomatius",
     role: "Mod",
     team: "TBD",

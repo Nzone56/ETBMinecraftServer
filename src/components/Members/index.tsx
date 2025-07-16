@@ -6,7 +6,6 @@ import { TeamsView } from "./TeamsView";
 
 export const Members = () => {
   const [view, setView] = useState("members");
-  
 
 
   return (

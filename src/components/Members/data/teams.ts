@@ -1,38 +1,54 @@
 import { Team } from "@/interfaces";
 import { AllMembers } from "./members";
 
-const teamStyles: Record<string, { logo: string; maincolor: string; secondcolor: string, foregroundcolor: string, detailcolor: string}> = {
+const teamData: Record<string, {
+  logo: string;
+  maincolor: string;
+  secondcolor: string;
+  foregroundcolor: string;
+  detailcolor: string;
+  baseCoords?: { x: number; y: number; z: number };
+  endCoords?: { x: number; y: number; z: number };
+  mapImage?: string;
+}> = {
   "Qin State": {
     logo: "qin",
     maincolor: "#3b0500", 
     secondcolor: "#110801",
-    foregroundcolor:  "#e9c166",
-    detailcolor: "#230a00"
+    foregroundcolor: "#e9c166",
+    detailcolor: "#230a00",
+    baseCoords: { x: 0, y: 0, z: 0 },
+    endCoords: { x: 0, y: 0, z: 0 },
+    mapImage: "/maps/qin_map.png"
   },
   "TBD": {
     logo: "default",
-    maincolor: "#808080", 
-    secondcolor: "#A9A9A9",
-    foregroundcolor:  "#e9c166",
-    detailcolor: "#230a00"
-  },
+    maincolor: "#1c1c1c",         
+    secondcolor: "#2e2e2e",       
+    foregroundcolor: "#d4c98f",   
+    detailcolor: "#3d3d3d",       
+    baseCoords: { x: 0, y: 0, z: 0 },
+    endCoords: { x: 0, y: 0, z: 0 },
+    mapImage: "/maps/default_map.png"
+  }
 };
 
 const uniqueTeams = [...new Set(AllMembers.map(m => m.team))];
 
 export const AllTeams: Team[] = uniqueTeams.map(teamName => {
-  const style = teamStyles[teamName] || {
+  const data = teamData[teamName] || {
     logo: "default",
     maincolor: "#444",
     secondcolor: "#888",
     foregroundcolor: "#666",
-    detailcolor: "#222"
+    detailcolor: "#222",
+    mapImage: "/maps/default_map.png",
   };
 
   return {
     uid: teamName.toLowerCase().replace(/\s+/g, "_"),
     name: teamName,
     members: AllMembers.filter(member => member.team === teamName),
-    ...style,
+    ...data,
   };
 });

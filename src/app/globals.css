@@ -32,23 +32,6 @@
   font-display: swap;
 }
 
-@keyframes run-loop {
-  0% {
-    transform: translateX(0) scale(1);
-  }
-  25% {
-    transform: translateX(2px) scale(1.01);
-  }
-  50% {
-    transform: translateX(0) scale(1);
-  }
-  75% {
-    transform: translateX(-2px) scale(1.01);
-  }
-  100% {
-    transform: translateX(0) scale(1);
-  }
-}
 
 @keyframes bump {
   0% {
@@ -84,8 +67,38 @@
   }
 }
 
-.animate-run {
-  animation: run-loop 0.6s infinite ease-in-out;
+@keyframes banner-wave {
+  0% {
+    transform: rotateX(0deg) translateY(0px) scaleY(1);
+  }
+  50% {
+    transform: rotateX(5deg) translateY(2px) scaleY(1.05);
+  }
+  100% {
+    transform: rotateX(0deg) translateY(0px) scaleY(1);
+  }
+}
+
+@keyframes wipe-out-left {
+  0% {
+    clip-path: inset(0% 0% 0% 0%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0% 100% 0% 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes wipe-in-right {
+  0% {
+    clip-path: inset(0% 100% 0% 0%);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0% 0% 0% 0%);
+    opacity: 1;
+  }
 }
 
 .animate-bump {
@@ -93,11 +106,26 @@
 }
 
 .animate-spin-up-out {
-  animation: spin-up-out 1.25s ease-in forwards;
+  animation: spin-up-out 1s ease-in forwards;
 }
 
 .animate-fall-in {
   animation: fall-in 1s ease-out forwards;
+}
+
+.animate-banner-wave {
+  animation: banner-wave 2s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.animate-wipe-out-left {
+  animation: wipe-out-left 0.6s ease forwards;
+  z-index: 10;
+}
+
+.animate-wipe-in-right {
+  animation: wipe-in-right 0.6s ease forwards;
+  z-index: 20;
 }
 
 html {
@@ -110,11 +138,16 @@ body {
   font-family: "Minecraft", sans-serif;
 }
 
-.thumbnail-scroll {
-  background-color: rgba(255, 255, 255, 0.05); /* o tu bg-secondary con opacidad */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* o border-tertiary */
+.thumbnail-scroll-preview {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1); 
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(6px);
   scrollbar-color: #888 transparent;
+}
+
+.thumbnail-scroll-faces-team {
+  backdrop-filter: blur(6px);
+  scrollbar-color: #fff transparent;
 }

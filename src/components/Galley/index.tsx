@@ -29,6 +29,7 @@ export const Gallery = () => {
           src={src}
           alt={`Gato ${index + 1}`}
           fill
+          sizes="(max-width: 250px)"
           className="rounded object-cover"
         />
       </div>

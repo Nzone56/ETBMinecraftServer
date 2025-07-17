@@ -19,7 +19,7 @@ const teamData: Record<string, {
     detailcolor: "#230a00",
     baseCoords: { x: 0, y: 0, z: 0 },
     endCoords: { x: 0, y: 0, z: 0 },
-    mapImage: "/maps/qin_map.png"
+    mapImage: ""
   },
   "TBD": {
     logo: "default",
@@ -29,7 +29,7 @@ const teamData: Record<string, {
     detailcolor: "#3d3d3d",       
     baseCoords: { x: 0, y: 0, z: 0 },
     endCoords: { x: 0, y: 0, z: 0 },
-    mapImage: "/maps/default_map.png"
+    mapImage: ""
   }
 };
 

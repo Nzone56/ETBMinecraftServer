@@ -24,7 +24,7 @@ export const AllMembers: Member[] = [
     ],
   },
   {
-    uid: "46086d6e-6630-4fa6-a020-7393e4f5c228",
+    uid: "46086d6e66304fa6a0207393e4f5c228",
     name: "Gabomatius",
     role: "Mod",
     team: "TBD",

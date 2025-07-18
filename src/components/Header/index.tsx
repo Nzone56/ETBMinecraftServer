@@ -17,7 +17,7 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-secondary border-b border-tertiary py-4 px-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-primary font-minecraft text-xl tracking-wide">🧱METBS4</h1>
+        <h1 className="text-primary font-minecraft text-xl tracking-wide">🧱METBS6</h1>
 
         {/* Desktop nav */}
         <nav aria-label="Main navigation" className="hidden sm:flex space-x-4 text-sm">

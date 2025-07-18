@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 
 export const metadata: Metadata = {
-  title: "METBS4",
+  title: "METBS6",
   description: "A petición de Fabián ❤️",
 };
 

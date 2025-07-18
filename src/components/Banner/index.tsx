@@ -52,7 +52,7 @@ export const Banner = () => {
           PROMOCIONADO POR:
           <strong> NICO NICO NII</strong>
         </p>
-        <h1 className="text-5xl md:text-6xl font-minecraft text-primary mb-6">Minecraft ETB Server 4</h1>
+        <h1 className="text-5xl md:text-6xl font-minecraft text-primary mb-6">Minecraft ETB server 6</h1>
         <p className="text-lg md:text-xl mb-4">Tiempo de Espera:</p>
 
         {/* Counter */}

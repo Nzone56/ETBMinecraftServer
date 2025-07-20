@@ -2,8 +2,8 @@ import { Member } from "@/interfaces";
 
 export const AllMembers: Member[] = [
   {
-    uid: "NicoNicoNii",
-    name: "NicoNicoNii",
+    uid: "b844389a58714fbc9774f323ae8c00bc",
+    name: "Jacknificent",
     role: "Admin",
     team: "TBD",
     highlights: [

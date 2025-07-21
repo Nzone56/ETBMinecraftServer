@@ -92,4 +92,11 @@ export const AllMembers: Member[] = [
     team: "Follamigos",
     highlights: ["Es costeño", "Es fifas y motero", `El crush de Fabián`],
   },
+  {
+    uid: "Antony",
+    name: "Antony",
+    role: "Guest",
+    team: "Follamigos",
+    highlights: ["Le gustan las aves", "Viaja mas que pedido de Aliexpress", `Juega lol for fun`],
+  },
 ];

@@ -17,13 +17,9 @@ export const TeamPreview = ({ team, selected, handleSelectIcon }: Props) => {
       style={{ width: "64px", height: "125px" }}
       onClick={handleSelectIcon}
     >
-      {team.name === "TBD" ? (
+      {team.name !== "Qin State" ? (
         <div className="flex items-center justify-center border-2 border-gray-800" style={{ width: "64px", height: "125px" }}>
-          TBD
-        </div>
-      ) : team.name === "A/C" ? (
-        <div className="flex items-center justify-center border-2 border-gray-800" style={{ width: "64px", height: "125px" }}>
-          A/C
+          {team.name.slice(0,3)}
         </div>
       ) : (
         <Image

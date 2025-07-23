@@ -11,7 +11,7 @@ const rules = [
   "🔨 Prohibido matar a otros jugadores.",
 ];
 
-export const Rules = () => {
+export default function Rules ()  {
   return (
     <section id="rules" className="min-h-[100vh] bg-background text-foreground py-16 px-4 flex flex-col items-center">
       <h2 className="text-3xl md:text-4xl font-minecraft text-primary mb-10 text-center">Reglas del servidor</h2>

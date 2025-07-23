@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-export const Gallery = () => {
+export default function Gallery () {
 
   const images = Array.from({ length: 9 }, (_, i) => {
     const number = (i + 1).toString().padStart(2, "0"); 

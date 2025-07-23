@@ -39,3 +39,9 @@ export interface NewsEntry {
   features: NewsFeatureSection[];
   video?: string;
 }
+
+export interface Guide {
+  emoji: string;
+  title: string;
+  content: React.ReactNode;
+};

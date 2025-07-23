@@ -11,6 +11,7 @@ export const Header = () => {
     { href: "/rules", label: "Reglas" },
     { href: "/gallery", label: "Galería" },
     { href: "/news", label: "Novedades" },
+    { href: "/guides", label: "Guias" },
   ];
 
   return (

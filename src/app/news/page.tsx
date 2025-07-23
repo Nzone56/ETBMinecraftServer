@@ -8,7 +8,7 @@ export default function News() {
   const { currentIndex, handleNext, handlePrevious, prevItem, animatingOut, showNew } = useItemSelector<NewsEntry>({ itemsArray: newsData, duration: 300 });
 
   return (
-    <section className="max-w-4xl mx-auto p-6 min-h-screen">
+    <section className="animate-fade-in max-w-4xl mx-auto p-6 min-h-screen">
       <h2 className="text-3xl font-bold mb-8 text-center text-primary">📰 Minecraft Features desde 1.20 hasta 1.21.8</h2>
       {/* Index */}
       <p className="text-center text-sm mt-4 text-muted-foreground">

@@ -27,7 +27,7 @@ export const TeamPreview = ({ team, selected, handleSelectIcon }: Props) => {
           alt={`Banner de ${team.name}`}
           width={64}
           height={125}
-          style={{ width: "64px", height: "125px", objectFit: "cover" }}
+          style={{ width: "64px", minWidth: "64px", height: "125px", objectFit: "cover" }}
           className={`rounded`}
         />
       )}

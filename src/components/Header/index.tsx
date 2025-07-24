@@ -7,17 +7,21 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { href: "#status", label: "Estado" },
-    { href: "#members", label: "Miembros" },
-    { href: "#rules", label: "Reglas" },
-    { href: "#gallery", label: "Galería" },
-    { href: "#events", label: "Eventos" },
+    { href: "/members", label: "Miembros" },
+    { href: "/rules", label: "Reglas" },
+    { href: "/gallery", label: "Galería" },
+    { href: "/news", label: "Novedades" },
+    { href: "/guides", label: "Guias" },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-secondary border-b border-tertiary py-4 px-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-primary font-minecraft text-xl tracking-wide">🧱METBS6</h1>
+        <h1 className="text-primary font-minecraft text-xl tracking-wide">
+          <a href={'/'}>
+            🧱METBS6
+          </a>
+        </h1>
 
         {/* Desktop nav */}
         <nav aria-label="Main navigation" className="hidden sm:flex space-x-4 text-sm">

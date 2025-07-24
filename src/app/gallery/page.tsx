@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 
-export const Gallery = () => {
+export default function Gallery () {
 
   const images = Array.from({ length: 9 }, (_, i) => {
     const number = (i + 1).toString().padStart(2, "0"); 
@@ -11,7 +11,7 @@ export const Gallery = () => {
   });
 
   return (
-    <section id="gallery" className="min-h-[100vh] w-full bg-background text-foreground py-16 px-4 flex flex-col items-center justify-center">
+    <section id="gallery" className="animate-fade-in min-h-[100vh] w-full bg-background text-foreground py-16 px-4 flex flex-col items-center justify-center">
       <h2 className="text-3xl md:text-4xl font-minecraft text-primary mb-6 text-center">Galería del servidor</h2>
 
       <p className="text-sm md:text-base text-center max-w-md text-muted-foreground">

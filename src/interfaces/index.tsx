@@ -28,3 +28,20 @@ export interface Event {
   description: string,
   end: boolean
 }
+
+export interface NewsFeatureSection {
+  title: string;
+  items: string[];
+}
+
+export interface NewsEntry {
+  version: string;
+  features: NewsFeatureSection[];
+  video?: string;
+}
+
+export interface Guide {
+  emoji: string;
+  title: string;
+  content: React.ReactNode;
+};

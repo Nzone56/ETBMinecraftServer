@@ -9,7 +9,7 @@ const events: Event[] = [
     date: "1 de Julio",
     time: "7:00 PM (COL)",
     description:
-      "Se anuncio la 4edición (creo) del METBS.",
+      "Se anuncio la 6edición (creo) del METBS.",
     end: true,
   },
   {

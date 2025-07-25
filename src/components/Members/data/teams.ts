@@ -24,7 +24,7 @@ const teamData: Record<
     endCoords: { x: 0, y: 0, z: 0 },
     mapImage: "",
   },
-  Nico: {
+  Sisyphus: {
     logo: "default",
     maincolor: "#1c1c1c",
     secondcolor: "#2e2e2e",
@@ -35,16 +35,6 @@ const teamData: Record<
     mapImage: "",
   },
   Gabo: {
-    logo: "default",
-    maincolor: "#1c1c1c",
-    secondcolor: "#2e2e2e",
-    foregroundcolor: "#d4c98f",
-    detailcolor: "#3d3d3d",
-    baseCoords: { x: 0, y: 0, z: 0 },
-    endCoords: { x: 0, y: 0, z: 0 },
-    mapImage: "",
-  },
-  "A/C": {
     logo: "default",
     maincolor: "#1c1c1c",
     secondcolor: "#2e2e2e",
@@ -74,7 +64,7 @@ const teamData: Record<
     endCoords: { x: 0, y: 0, z: 0 },
     mapImage: "",
   },
-  TBD: {
+  Guarachos: {
     logo: "default",
     maincolor: "#1c1c1c",
     secondcolor: "#2e2e2e",

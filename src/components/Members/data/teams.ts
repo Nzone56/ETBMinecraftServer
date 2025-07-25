@@ -54,12 +54,12 @@ const teamData: Record<
     endCoords: { x: 0, y: 0, z: 0 },
     mapImage: "",
   },
-  Follamigos: {
-    logo: "default",
-    maincolor: "#1c1c1c",
-    secondcolor: "#2e2e2e",
-    foregroundcolor: "#d4c98f",
-    detailcolor: "#3d3d3d",
+  Fantastic4: {
+    logo: "fantastic4",
+    maincolor: "#0e4a80",
+    secondcolor: "#fff",
+    foregroundcolor: "#01050b",
+    detailcolor: "#158fd4",
     baseCoords: { x: 0, y: 0, z: 0 },
     endCoords: { x: 0, y: 0, z: 0 },
     mapImage: "",

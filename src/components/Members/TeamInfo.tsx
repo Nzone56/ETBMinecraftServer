@@ -21,14 +21,14 @@ export const TeamInfo = ({ team }: Props) => {
         {team.name}
       </div>
 
-      <div className="flex flex-row items-center justify-between gap-8 p-8" >
+      <div className="flex flex-row items-center justify-between gap-8 p-8">
         {/* Banner */}
-        {team.name !== "Qin State" ? (
+        {team.name !== "Qin State" && team.name !== "Fantastic4" ? (
           <div className="sm:mx-4 flex items-center justify-center border-2 border-gray-800" style={{ minWidth: "64px", minHeight: "125px" }} title={team.name}>
-            {team.name.slice(0,3)}
+            {team.name.slice(0, 3)}
           </div>
         ) : (
-          <Image src={`/images/teams/banners/${team.logo}_banner.png`} alt={`Banner de ${team.name}`} width={64} height={125} className="sm:mx-4" title={team.name}/>
+          <Image src={`/images/teams/banners/${team.logo}_banner.png`} alt={`Banner de ${team.name}`} width={64} height={125} className="sm:mx-4" title={team.name} />
         )}
 
         {/* Info */}

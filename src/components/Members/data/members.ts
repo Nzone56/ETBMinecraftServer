@@ -23,17 +23,17 @@ export const AllMembers: Member[] = [
     highlights: ["Solo juega dos días", "Se dice que una vez estuvo para matar al dragón", "Es metacho"],
   },
   {
-    uid: "SevenFabian",
+    uid: "22a90ba0-ab04-4586-beab-a9c527cfab80",
     name: "SevenFabian",
     role: "Member",
-    team: "Follamigos",
+    team: "Fantastic4",
     highlights: ["Es trisexual (hombres, mujeres, furros)", "Colecciona esmeraldas porque le recuerdan su rango en el LoL", "Le explotó la casa a Maurito"],
   },
   {
     uid: "CAM",
     name: "CAM",
     role: "Member",
-    team: "Follamigos",
+    team: "Fantastic4",
     highlights: ["Distancia total entre todos los servidores: 145 bloques", "Le gusta 'cumear'", "No sabe qué es un Wither"],
   },
   {
@@ -89,14 +89,14 @@ export const AllMembers: Member[] = [
     uid: "Miguel",
     name: "Miguel",
     role: "Guest",
-    team: "Follamigos",
+    team: "Fantastic4",
     highlights: ["Es costeño", "Es fifas y motero", `El crush de Fabián`],
   },
   {
     uid: "Antony",
     name: "Antony",
     role: "Guest",
-    team: "Follamigos",
+    team: "Fantastic4",
     highlights: ["Le gustan las aves", "Viaja mas que pedido de Aliexpress", `Juega lol for fun`],
   },
 ];

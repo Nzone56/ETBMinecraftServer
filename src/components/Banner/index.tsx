@@ -4,8 +4,8 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const Banner = () => {
-  const serverOnline = false;
-  const serverIP = "mc.etb.gg";
+  const serverOnline = true;
+  const serverIP = "23.230.3.76:25567";
   const launchDate = new Date("2025-07-25T19:00:00");
 
   const [timeLeft, setTimeLeft] = useState("--d --h --m --s");
